@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Private from "./components/Private"
 import authService from './services/auth-service';
 
 class App extends Component {
@@ -56,6 +57,11 @@ class App extends Component {
             exact
             path="/login"
             render={(props) => <Login {...props} setUser={this.setUser} />}
+          />
+          <Route
+            exact
+            path="/private"
+            render={(props) => <Private {...props} isLoggedIn={isLoggedIn}/>}
           />
         </Switch>
       </div>

@@ -19,6 +19,9 @@ const Navbar = ({ isLoggedIn, user, setUser }) => {
               <button onClick={() => logoutUser()}>Logout</button>
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/private">Private</NavLink>
+          </li>
         </>
       )}
       {!isLoggedIn && (
