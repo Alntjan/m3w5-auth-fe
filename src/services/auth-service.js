@@ -9,6 +9,9 @@ class AuthService {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true,
       },
+      proxy: {
+        host: process.env.REACT_APP_API_HOST,
+      },
     });
   }
 
