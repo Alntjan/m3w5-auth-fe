@@ -9,7 +9,11 @@ class AuthService {
   }
 
   signup = (username, password) => {
-    return this.service.post('/signup', { username, password });
+    return this.service.post(
+      '/signup',
+      { username, password },
+      { withCredentials: true }
+    );
   };
 
   login = (username, password) => {
