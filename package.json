@@ -2,6 +2,7 @@
   "name": "m3w5-auth-fe",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://m3w5-auth-be.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
