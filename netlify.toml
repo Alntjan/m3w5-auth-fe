@@ -3,3 +3,4 @@
   to = "https://m3w5-auth-be.herokuapp.com/:splat"
   status = 200
   force = true
+  headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*", Access-Control-Allow-Credentials = true}
