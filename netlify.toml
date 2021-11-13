@@ -1,13 +1,32 @@
 [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[redirects]]
   from = "/api/*"
   to = "https://m3w5-auth-be.herokuapp.com/:splat"
   status = 200
   force = true
-  headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*", Access-Control-Allow-Credentials = true}
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    X-From = "Netlify"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Credentials = true
 
 [[redirects]]
   from = "*/api/*"
   to = "https://m3w5-auth-be.herokuapp.com/:splat"
   status = 200
   force = true
-  headers = {X-From = "Netlify", Access-Control-Allow-Origin = "*", Access-Control-Allow-Credentials = true}
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    X-From = "Netlify"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Credentials = true
