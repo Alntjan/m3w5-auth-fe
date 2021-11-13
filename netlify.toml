@@ -3,6 +3,12 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/api/*"
+  to = "https://m3w5-auth-be.herokuapp.com/:splat"
+  status = 200
+  force = true
+
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
@@ -11,14 +17,10 @@
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Credentials = "true"
 
-[[redirects]]
-  from = "/api/*"
-  to = "https://m3w5-auth-be.herokuapp.com/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "*/api/*"
-  to = "https://m3w5-auth-be.herokuapp.com/:splat"
-  status = 200
-  force = true
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/api/*"
+    [headers.values]
+    X-From = "Netlify"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Credentials = "true"
