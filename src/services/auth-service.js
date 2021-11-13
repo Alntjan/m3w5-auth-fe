@@ -6,6 +6,9 @@ class AuthService {
       // baseURL: `${process.env.REACT_APP_API_HOST}/auth`,
       baseURL: `/api/auth`,
       withCredentials: true,
+      proxy: {
+        host: process.env.REACT_APP_API_HOST,
+      },
     });
   }
 
