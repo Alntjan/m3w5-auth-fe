@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/api/*"
+  from = "https://m3w5-auth-be.netlify.app/api*"
   to = "https://m3w5-auth-be.herokuapp.com/:splat"
   status = 200
   force = true
